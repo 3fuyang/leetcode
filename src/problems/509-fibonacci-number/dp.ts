@@ -1,4 +1,4 @@
-function fib(n: number): number {
+export function fib(n: number): number {
   const dp: number[] = [0, 1]
 
   for (let i = 2; i <= n; i++) {
