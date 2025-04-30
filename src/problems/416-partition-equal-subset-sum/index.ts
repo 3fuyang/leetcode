@@ -6,9 +6,10 @@ export function canPartition(nums: number[]): boolean {
   }
 
   const volume = sum / 2
-  const dp: number[][] = Array.from({ length: nums.length }, () =>
-    new Array(volume + 1).fill(0),
+  const dp: boolean[][] = Array.from({ length: nums.length }, () =>
+    new Array(volume + 1).fill(false),
   )
+  dp[0][0] = true
 
   for (let i = 1; i < nums.length; i++) {
     for (let j = 0; j <= volume; j++) {
@@ -17,9 +18,9 @@ export function canPartition(nums: number[]): boolean {
         continue
       }
 
-      dp[i][j] = Math.max(dp[i - 1][j], nums[i] + dp[i - 1][j - nums[i]])
+      dp[i][j] = dp[i - 1][j] || dp[i - 1][j - nums[i]]
     }
   }
 
-  return dp[nums.length - 1][volume] === volume
+  return dp[nums.length - 1][volume]
 }
