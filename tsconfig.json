@@ -1,11 +1,22 @@
 {
-  "$schema":"https://json.schemastore.org/tsconfig",
+  "$schema": "https://www.schemastore.org/tsconfig",
   "compilerOptions": {
-     "noEmit": true,
-     "target": "esnext",
-     "module": "nodenext",
-     "rewriteRelativeImportExtensions": true,
-     "erasableSyntaxOnly": true,
-     "verbatimModuleSyntax": true
+    "target": "esnext",
+    "module": "nodenext",
+
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true,
+
+    "noEmit": true,
+
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true
   }
 }
