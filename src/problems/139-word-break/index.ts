@@ -3,7 +3,7 @@ function wordBreak(s: string, wordDict: string[]): boolean {
   // a space-separated sequence of dictionaries words
   // from `wordDict`
   // dp[j] = dp[j] || (dp[j - wordDict[i].length] && wordDict[i] === subStrEndingWith`wordDict[i]`)
-  const dp: boolean[] = new Array(s.length + 1).fill(false)
+  const dp: boolean[] = Array(s.length + 1).fill(false)
   dp[0] = true // IMPORTANT
 
   // permutations

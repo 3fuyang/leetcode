@@ -1,4 +1,4 @@
-function calculate(s: string): number {
+export function calculate(s: string): number {
   const st: number[] = []
   let result = 0
   let number = 0
